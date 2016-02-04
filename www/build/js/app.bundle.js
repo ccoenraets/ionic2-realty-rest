@@ -61553,7 +61553,7 @@
 	            .catch(this.handleError);
 	    };
 	    BrokerService.prototype.findById = function (id) {
-	        return this.http.get(this.brokersUrl + '/' + id)
+	        return this.http.get(this.brokersUrl + id)
 	            .map(function (res) { return res.json(); })
 	            .catch(this.handleError);
 	    };
@@ -70340,6 +70340,7 @@
 	var core_1 = __webpack_require__(8);
 	var config_1 = __webpack_require__(357);
 	var http_1 = __webpack_require__(144);
+	var Observable_1 = __webpack_require__(58);
 	__webpack_require__(358);
 	var favorites = [], propertiesURL = config_1.SERVER_URL + 'properties/', favoritesURL = propertiesURL + 'favorites/', likesURL = propertiesURL + 'likes/';
 	var PropertyService = (function () {
@@ -70372,13 +70373,13 @@
 	            .catch(this.handleError);
 	    };
 	    PropertyService.prototype.unfavorite = function (property) {
-	        return this.http.delete(favoritesURL + '/' + property.id)
+	        return this.http.delete(favoritesURL + property.id)
 	            .map(function (res) { return res.json(); })
 	            .catch(this.handleError);
 	    };
 	    PropertyService.prototype.handleError = function (error) {
 	        console.error(error);
-	        return rx.Observable.throw(error.json().error || 'Server error');
+	        return Observable_1.Observable.throw(error.json().error || 'Server error');
 	    };
 	    PropertyService = __decorate([
 	        core_1.Injectable(), 
