@@ -1,6 +1,7 @@
 function isHeroku()
 {
-    return process.env.NODE && process.env.NODE.indexOf("heroku");
+    // Rudimentary check to see if the app is running on Heroku. assumes you don't have a PORT env var set locally
+    return process.env.PORT;
 }
 
 
