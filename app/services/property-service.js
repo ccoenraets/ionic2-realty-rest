@@ -5,8 +5,8 @@ import 'rxjs/Rx';
 
 let favorites = [],
     propertiesURL = SERVER_URL + 'properties',
-    favoritesURL = propertiesURL + 'favorites',
-    likesURL = propertiesURL + 'likes';
+    favoritesURL = propertiesURL + '/favorites',
+    likesURL = propertiesURL + '/likes';
 
 @Injectable()
 export class PropertyService {
