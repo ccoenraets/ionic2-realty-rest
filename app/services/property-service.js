@@ -53,7 +53,7 @@ export class PropertyService {
 
     handleError(error) {
         console.error(error);
-        return rx.Observable.throw(error.json().error || 'Server error');
+        return Observable.throw(error.json().error || 'Server error');
     }
 
 }
