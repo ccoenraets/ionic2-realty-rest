@@ -3,7 +3,7 @@ import {Http} from 'angular2/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
-let brokersURL = SERVER_URL + '/brokers';
+let brokersURL = SERVER_URL + 'brokers';
 
 @Injectable()
 export class BrokerService {

@@ -29,9 +29,7 @@ function favorite(req, res, next) {
 }
 
 function unfavorite(req, res, next) {
-    console.log("unfave");
     var id = req.params.id;
-    console.log(id);
     for (var i = 0; i < favorites.length; i++) {
         if (favorites[i].id == id) {
             favorites.splice(i, 1);
