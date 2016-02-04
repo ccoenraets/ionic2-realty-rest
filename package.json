@@ -18,6 +18,6 @@
     "strip-sourcemap-loader": "0.0.1",
     "typescript": "^1.7.5"
   },
-  "name": "IonicRealty REST",
+  "name": "IonicRealtyREST",
   "description": "Sample App"
 }
