@@ -1,6 +1,6 @@
 function isHeroku()
 {
-    return process.env.NODE && ~process.env.NODE.indexOf("heroku") ? true : false;
+    return process.env.NODE && process.env.NODE.indexOf("heroku");
 }
 
 
