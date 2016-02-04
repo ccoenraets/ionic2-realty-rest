@@ -1,9 +1,10 @@
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 import {SERVER_URL} from './config';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-let brokersURL = SERVER_URL + 'brokers';
+let brokersURL = SERVER_URL + 'brokers/';
 
 @Injectable()
 export class BrokerService {

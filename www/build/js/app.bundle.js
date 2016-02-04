@@ -61540,8 +61540,9 @@
 	var core_1 = __webpack_require__(8);
 	var http_1 = __webpack_require__(144);
 	var config_1 = __webpack_require__(357);
+	var Observable_1 = __webpack_require__(58);
 	__webpack_require__(358);
-	var brokersURL = config_1.SERVER_URL + 'brokers';
+	var brokersURL = config_1.SERVER_URL + 'brokers/';
 	var BrokerService = (function () {
 	    function BrokerService(http) {
 	        this.http = http;
@@ -61558,7 +61559,7 @@
 	    };
 	    BrokerService.prototype.handleError = function (error) {
 	        console.error(error);
-	        return Observable.throw(error.json().error || 'Server error');
+	        return Observable_1.Observable.throw(error.json().error || 'Server error');
 	    };
 	    BrokerService = __decorate([
 	        core_1.Injectable(), 
@@ -61575,7 +61576,6 @@
 
 	function isHeroku() {
 	    // Rudimentary check to see if we are running on Heroku. Should provide a more flexible config.
-	    console.log(window.location.hostname.indexOf('herokuapp.com') > 0);
 	    return window.location.hostname.indexOf('herokuapp.com') > 0;
 	}
 	exports.SERVER_URL = isHeroku() ? "/" : "http://localhost:5000/";
@@ -70341,7 +70341,7 @@
 	var config_1 = __webpack_require__(357);
 	var http_1 = __webpack_require__(144);
 	__webpack_require__(358);
-	var favorites = [], propertiesURL = config_1.SERVER_URL + 'properties', favoritesURL = propertiesURL + 'favorites', likesURL = propertiesURL + 'likes';
+	var favorites = [], propertiesURL = config_1.SERVER_URL + 'properties/', favoritesURL = propertiesURL + 'favorites/', likesURL = propertiesURL + 'likes/';
 	var PropertyService = (function () {
 	    function PropertyService(http) {
 	        this.http = http;
@@ -70378,7 +70378,7 @@
 	    };
 	    PropertyService.prototype.handleError = function (error) {
 	        console.error(error);
-	        return Observable.throw(error.json().error || 'Server error');
+	        return rx.Observable.throw(error.json().error || 'Server error');
 	    };
 	    PropertyService = __decorate([
 	        core_1.Injectable(), 

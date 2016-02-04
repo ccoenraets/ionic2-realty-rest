@@ -1,12 +1,13 @@
 import {Injectable} from 'angular2/core';
 import {SERVER_URL} from './config';
 import {Http, Headers, RequestOptions} from 'angular2/http';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 let favorites = [],
-    propertiesURL = SERVER_URL + 'properties',
-    favoritesURL = propertiesURL + '/favorites',
-    likesURL = propertiesURL + '/likes';
+    propertiesURL = SERVER_URL + 'properties/',
+    favoritesURL = propertiesURL + 'favorites/',
+    likesURL = propertiesURL + 'likes/';
 
 @Injectable()
 export class PropertyService {
@@ -52,7 +53,7 @@ export class PropertyService {
 
     handleError(error) {
         console.error(error);
-        return Observable.throw(error.json().error || 'Server error');
+        return rx.Observable.throw(error.json().error || 'Server error');
     }
 
 }
