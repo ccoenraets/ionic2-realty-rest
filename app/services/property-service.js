@@ -46,7 +46,7 @@ export class PropertyService {
     }
 
     unfavorite(property) {
-        return this.http.delete(favoritesURL + '/' + property.id)
+        return this.http.delete(favoritesURL + property.id)
             .map(res => res.json())
             .catch(this.handleError);
     }

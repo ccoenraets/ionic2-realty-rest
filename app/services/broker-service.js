@@ -20,7 +20,7 @@ export class BrokerService {
     }
 
     findById(id) {
-        return this.http.get(this.brokersUrl + '/' + id)
+        return this.http.get(this.brokersUrl + id)
             .map(res => res.json())
             .catch(this.handleError);
     }
