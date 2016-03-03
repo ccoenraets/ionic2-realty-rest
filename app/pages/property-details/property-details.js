@@ -1,14 +1,17 @@
-import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic/ionic';
+import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-framework/ionic';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
 import {PropertyService} from '../../services/property-service';
-
 
 @Page({
     templateUrl: 'build/pages/property-details/property-details.html'
 })
 export class PropertyDetailsPage {
 
-    constructor(nav:NavController, navParams:NavParams, propertyService:PropertyService) {
+    static get parameters() {
+        return [[NavController], [NavParams], [PropertyService]];
+    }
+
+    constructor(nav, navParams, propertyService) {
         this.nav = nav;
         this.propertyService = propertyService;
         this.property = navParams.get('property');
@@ -16,22 +19,26 @@ export class PropertyDetailsPage {
 
     favorite(event, property) {
 
-        this.propertyService.favorite(property).subscribe(() => {
-            let alert = Alert.create({
-                title: 'Favorites',
-                subTitle: 'Property added to your favorites',
-                buttons: ['OK']
-            });
-            this.nav.present(alert);
-        });
+        this.propertyService.favorite(property).subscribe(
+            property => {
+                let alert = Alert.create({
+                    title: 'Favorites',
+                    subTitle: 'Property added to your favorites',
+                    buttons: ['OK']
+                });
+                this.nav.present(alert);
+            }
+        );
 
     }
 
     like(event, property) {
 
-        this.propertyService.like(property).subscribe(likes => {
-            property.likes = likes;
-        });
+        this.propertyService.like(property).subscribe(
+            likes => {
+                property.likes = likes;
+            }
+        );
 
     }
 

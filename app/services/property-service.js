@@ -12,7 +12,11 @@ let favorites = [],
 @Injectable()
 export class PropertyService {
 
-    constructor (http:Http) {
+    static get parameters() {
+        return [[Http]];
+    }
+
+    constructor (http) {
         this.http = http;
     }
 

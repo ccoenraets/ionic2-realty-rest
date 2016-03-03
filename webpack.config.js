@@ -5,7 +5,6 @@ module.exports = {
   entry: [
     path.normalize('es6-shim/es6-shim.min'),
     'reflect-metadata',
-    'web-animations.min',
     path.normalize('zone.js/dist/zone-microtask'),
     path.resolve('app/app')
   ],
@@ -18,10 +17,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'awesome-typescript',
+        loader: 'babel',
         query: {
-          doTypeCheck: false,
-          useWebpackText: true
+          presets: ['es2015'],
+          plugins: ['transform-decorators-legacy']
         },
         include: path.resolve('app'),
         exclude: /node_modules/
@@ -35,14 +34,13 @@ module.exports = {
     noParse: [
       /es6-shim/,
       /reflect-metadata/,
-      /web-animations/,
       /zone\.js(\/|\\)dist(\/|\\)zone-microtask/
     ]
   },
   resolve: {
+    root: ['app'],
     alias: {
-      'ionic': 'ionic-framework',
-      'web-animations.min': path.normalize('ionic-framework/js/web-animations.min')
+      'angular2': path.resolve('node_modules/angular2')
     },
     extensions: ['', '.js']
   }

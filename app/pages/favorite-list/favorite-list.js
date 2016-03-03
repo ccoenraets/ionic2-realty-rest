@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';
-import {Page, NavController, NavParams} from 'ionic/ionic';
+import {Page, NavController, NavParams} from 'ionic-framework/ionic';
 import {PropertyDetailsPage} from '../property-details/property-details';
 import {PropertyService} from '../../services/property-service';
 
@@ -8,14 +8,20 @@ import {PropertyService} from '../../services/property-service';
 })
 export class FavoriteListPage {
 
-    constructor(nav:NavController, navParams:NavParams, propertyService:PropertyService) {
+    static get parameters() {
+        return [[NavController], [NavParams], [PropertyService]];
+    }
+
+    constructor(nav, navParams, propertyService) {
         this.nav = nav;
         this.propertyService = propertyService;
         this.selectedItem = navParams.get('item');
     }
 
     ngOnInit() {
-        this.propertyService.getFavorites().subscribe(data => this.properties = data);
+        this.propertyService.getFavorites().subscribe(
+            data => this.properties = data
+        );
     }
 
     itemTapped(event, property) {
@@ -25,7 +31,7 @@ export class FavoriteListPage {
     }
 
     deleteItem(event, property) {
-        this.propertyService.unfavorite(property).subscribe(data => this.properties = data);
+        this.propertyService.unfavorite(property).subscribe();
     }
 
 }

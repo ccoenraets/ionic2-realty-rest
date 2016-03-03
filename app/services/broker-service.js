@@ -9,7 +9,11 @@ let brokersURL = SERVER_URL + 'brokers/';
 @Injectable()
 export class BrokerService {
 
-    constructor (http:Http) {
+    static get parameters() {
+        return [[Http]];
+    }
+
+    constructor (http) {
         this.http = http;
     }
 
@@ -20,13 +24,12 @@ export class BrokerService {
     }
 
     findById(id) {
-        return this.http.get(this.brokersUrl + id)
+        return this.http.get(brokersURL + id)
             .map(res => res.json())
             .catch(this.handleError);
     }
 
     handleError(error) {
-        console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }
 
