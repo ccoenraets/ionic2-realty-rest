@@ -46,6 +46,8 @@ Your own instance of the application is automatically deployed.
     ionic serve
     ```
     
+### Resources
+    
 More information is available in this blog post: [Angular 2 and Ionic 2 Data Services - Part 2: Using REST Services](http://coenraets.org/blog/2016/02/angular2-ionic2-rest-services/)
     
 Additional Resources:
