@@ -1,5 +1,7 @@
 ## IonicRealty: Ionic 2 Sample App with REST services
 
+Watch the video [here](https://youtu.be/oKHrh_PMHns).
+
 ### Deploying and Running on Heroku
 
 1. Make sure you are logged in to the [Heroku Dashboard](https://dashboard.heroku.com)
