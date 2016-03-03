@@ -28,7 +28,7 @@ Your own instance of the application is automatically deployed.
     
 1. Clone this repository
     ```
-    git clone https://github.com/ccoenraets/ionic2-realty
+    git clone https://github.com/ccoenraets/ionic2-realty-rest
     ```
 
 1. Navigate to the ionic2-realty-rest directory
