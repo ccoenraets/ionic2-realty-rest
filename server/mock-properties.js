@@ -1,7 +1,7 @@
 exports.data = [
         {
             id: 1,
-            city: 'Boston',
+            city: 'Boston111111',
             state: 'MA',
             price: '$475,000',
             title: 'Condominium Redefined',
@@ -20,7 +20,7 @@ exports.data = [
         },
         {
             id: 2,
-            city: 'Cambridge',
+            city: 'Cambridge1',
             state: 'MA',
             price: '$1,200,000',
             title: 'Ultimate Sophistication',
@@ -39,7 +39,7 @@ exports.data = [
         },
         {
             id: 3,
-            city: 'Boston',
+            city: 'Boston1',
             state: 'MA',
             price: '$650,000',
             title: 'Seaport District Retreat',
@@ -58,7 +58,7 @@ exports.data = [
         },
         {
             id: 4,
-            city: 'Boston',
+            city: 'Boston1',
             state: 'MA',
             price: '$875,000',
             title: 'Modern City Living',
@@ -77,7 +77,7 @@ exports.data = [
         },
         {
             id: 5,
-            city: 'Boston',
+            city: 'Boston1',
             state: 'MA',
             zip: '02420',
             price: '$425,000',
@@ -97,7 +97,7 @@ exports.data = [
         },
         {
             id: 6,
-            city: 'Boston',
+            city: 'Boston2',
             state: 'MA',
             price: '$550,000',
             title: 'Waterfront in the City',
@@ -116,7 +116,7 @@ exports.data = [
         },
         {
             id: 7,
-            city: 'Brookline',
+            city: 'Brookline1',
             state: 'MA',
             zip: '02420',
             price: '$850,000',
@@ -136,7 +136,7 @@ exports.data = [
         },
         {
             id: 8,
-            city: 'Boston',
+            city: 'Boston3',
             state: 'MA',
             zip: '02420',
             price: '$925,000',
@@ -157,7 +157,7 @@ exports.data = [
         },
         {
             id: 9,
-            city: 'Cambridge',
+            city: 'Cambridge1',
             state: 'MA',
             zip: '02420',
             price: '$550,000',
@@ -177,7 +177,7 @@ exports.data = [
         },
         {
             id: 10,
-            city: 'Boston',
+            city: 'Boston2',
             state: 'MA',
             zip: '02420',
             price: '$375,000',
@@ -197,7 +197,7 @@ exports.data = [
         },
         {
             id: 11,
-            city: 'Boston',
+            city: 'Boston2',
             state: 'MA',
             zip: '02420',
             price: '$495,000',
@@ -217,7 +217,7 @@ exports.data = [
         },
         {
             id: 12,
-            city: 'Boston',
+            city: 'Boston5',
             state: 'MA',
             zip: '02420',
             price: '$625,000',
@@ -237,7 +237,7 @@ exports.data = [
         },
         {
             id: 13,
-            city: 'Cambridge',
+            city: 'Cambridge2',
             state: 'MA',
             zip: '02420',
             price: '$430,000',
@@ -257,7 +257,7 @@ exports.data = [
         },
         {
             id: 14,
-            city: 'Cambridge',
+            city: 'Cambridge1',
             state: 'MA',
             zip: '01742',
             price: '$450,000',
