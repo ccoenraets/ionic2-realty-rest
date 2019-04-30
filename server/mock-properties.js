@@ -1,7 +1,7 @@
 exports.data = [
         {
             id: 1,
-            city: 'Boston2011154124561',
+            city: 'Boston201112212354124561',
             state: 'MA',
             price: '$475,000',
             title: 'Condominium Redefined',
@@ -39,7 +39,7 @@ exports.data = [
         },
         {
             id: 3,
-            city: 'Boston1',
+            city: 'Boston1123123123123123',
             state: 'MA',
             price: '$650,000',
             title: 'Seaport District Retreat',
