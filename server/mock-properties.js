@@ -1,7 +1,7 @@
 exports.data = [
         {
             id: 1,
-            city: 'Boston111111',
+            city: 'Boston2011154124561',
             state: 'MA',
             price: '$475,000',
             title: 'Condominium Redefined',
